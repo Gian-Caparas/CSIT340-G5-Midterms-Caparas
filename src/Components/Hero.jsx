@@ -1,5 +1,5 @@
 import Stats from "./Stats";
-
+import Contribute from "./Contribute";
 export default function Hero({
   stars,
   downloads,
@@ -42,8 +42,9 @@ export default function Hero({
             >
             Reset
             </button>
+            <Contribute/>
         </div>
-        
+
         <div className="flex justify-center gap-6 pb-8">
             <Stats stars={stars} downloads={downloads} issues={issues} />
         </div>

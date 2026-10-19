@@ -1,3 +1,4 @@
+import Contribute from "./Contribute";
 import StatCard from "./StatCard";
 
 export default function Stats({ stars, downloads, issues }) {
@@ -6,6 +7,7 @@ export default function Stats({ stars, downloads, issues }) {
         <StatCard value={stars} label="Stars" />
         <StatCard value={downloads} label="Downloads" />
         <StatCard value={issues} label="Issues reported" />
+        <StatCard value={Contribute} label="Contribute" />
     </div>
     );
 }    
