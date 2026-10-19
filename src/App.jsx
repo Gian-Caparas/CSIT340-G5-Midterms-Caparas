@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Intro from "./Components/Intro";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -29,16 +29,7 @@ function App() {
   return (
     <div className="flex min-h-screen flex-col bg-[#FFF9F2] text-[#800020]">
       {/*Navbar*/}
-      <nav className="flex items-center justify-between bg-[#800020] px-20 py-6 text-[#FFF9F2]">
-        {/*Header*/}
-        <Intro />
-        <ul className="flex gap-10 text-xl">
-          <li>Docs</li>
-          <li>Components</li>
-          <li>GitHub</li>
-        </ul>
-        <p className="rounded-full bg-[#D45060] px-5 py-2 text-lg font-bold">v1.0</p>
-      </nav>
+      <Navbar />
 
       {/*Hero*/}
       <Hero
