@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -26,7 +27,9 @@ function App() {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#FFF9F2] text-[#800020]">
+      {/*Navbar*/}
       <nav className="flex items-center justify-between bg-[#800020] px-20 py-6 text-[#FFF9F2]">
+        {/*Header*/}
         <h1 className="text-3xl font-bold">Maroon UI</h1>
         <ul className="flex gap-10 text-xl">
           <li>Docs</li>
@@ -36,53 +39,16 @@ function App() {
         <p className="rounded-full bg-[#D45060] px-5 py-2 text-lg font-bold">v1.0</p>
       </nav>
 
-      <header className="px-20 pt-8 text-center">
-        <h2 className="text-7xl font-bold">Build pages faster.</h2>
-        <p className="mt-5 text-2xl text-[#000000]">An open-source component kit for React.</p>
-        <p className="mt-2 text-xl text-[#000000]">Made by CAPARAS</p>
-      </header>
-
-      <div className="flex justify-center gap-4 py-6">
-        <button
-          className="cursor-pointer rounded-lg bg-[#800020] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleStar}
-        >
-          Star
-        </button>
-        <button
-          className="cursor-pointer rounded-lg bg-[#D45060] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleDownload}
-        >
-          Download
-        </button>
-        <button
-          className="cursor-pointer rounded-lg bg-[#000000] px-8 py-3 text-xl font-bold text-[#FFF9F2]"
-          onClick={handleReport}
-        >
-          Report issue
-        </button>
-        <button
-          className="cursor-pointer rounded-lg border border-[#800020] px-8 py-3 text-xl font-bold"
-          onClick={handleReset}
-        >
-          Reset
-        </button>
-      </div>
-
-      <div className="flex justify-center gap-6 pb-8">
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{stars}</p>
-          <p className="mt-1 text-lg text-[#000000]">Stars</p>
-        </div>
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{downloads}</p>
-          <p className="mt-1 text-lg text-[#000000]">Downloads</p>
-        </div>
-        <div className="w-48 rounded-xl bg-[#F3E6D5] py-4 text-center">
-          <p className="text-4xl font-bold">{issues}</p>
-          <p className="mt-1 text-lg text-[#000000]">Issues reported</p>
-        </div>
-      </div>
+      {/*Hero*/}
+      <Hero
+        stars={stars}
+        downloads={downloads}
+        issues={issues}
+        onStar={handleStar}
+        onDownload={handleDownload}
+        onReport={handleReport}
+        onReset={handleReset}
+      />
 
       <main className="grid grid-cols-3 gap-8 px-20">
         <div className="rounded-xl bg-[#F3E6D5] p-6">
