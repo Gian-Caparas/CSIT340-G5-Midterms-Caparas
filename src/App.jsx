@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Intro from "./Components/Intro";
 
 function App() {
   const [stars, setStars] = useState(0);
@@ -30,7 +31,7 @@ function App() {
       {/*Navbar*/}
       <nav className="flex items-center justify-between bg-[#800020] px-20 py-6 text-[#FFF9F2]">
         {/*Header*/}
-        <h1 className="text-3xl font-bold">Maroon UI</h1>
+        <Intro />
         <ul className="flex gap-10 text-xl">
           <li>Docs</li>
           <li>Components</li>
